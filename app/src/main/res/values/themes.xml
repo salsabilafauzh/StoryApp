@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StoryApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorSurface">?attr/colorPrimary</item>
+        <item name="iconTint">@color/colorOnPrimary</item>
+        <item name="titleTextColor">@color/colorOnPrimary</item>
+        <item name="navigationIconTint">@color/colorOnPrimary</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+    </style>
+
+    <style name="splashscreen_text" parent="Base.Theme.StoryApp">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+
+    <style name="roundedImageView" parent="Base.Theme.StoryApp">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="Widget.App.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Card</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Card" parent="Theme.StoryApp">
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="colorOnSurfaceVariant">@color/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.StoryApp" parent="Base.Theme.StoryApp" />
+</resources>

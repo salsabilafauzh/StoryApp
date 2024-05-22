@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StoryApp</string>
+    <string name="login_welcome">Selamat datang kembali!</string>
+    <string name="login_to_continue">Masuk untuk melanjutkan.</string>
+    <string name="btn_login">Masuk</string>
+    <string name="password">Kata Sandi</string>
+    <string name="email">Email</string>
+    <string name="btn_register">Daftar</string>
+    <string name="halaman_login">Gambar di Halaman login</string>
+    <string name="gambar_di_halaman_register">Gambar di halaman daftar</string>
+    <string name="welcome_register">Ayo siapkan perjalananmu!</string>
+    <string name="ceate_new_account">Buat akun baru.</string>
+    <string name="name">Nama</string>
+    <string name="ok_dialog_button">Oke</string>
+    <string name="error_message">Ada yang salah, coba lagi.</string>
+    <string name="success_message">Pembuatan berhasil</string>
+    <string name="setting_language">Pengaturan bahasa</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="click_to_add_your_story">klik untuk menambahkan cerita Anda</string>
+    <string name="image_story_list">Klik gambar untuk detail</string>
+    <string name="description">deskripsi</string>
+    <string name="date">25/25/25</string>
+    <string name="here_to_logout">di sini untuk keluar</string>
+    <string name="logout">keluar</string>
+    <string name="gallery">galeri</string>
+    <string name="camera">kamera</string>
+    <string name="create_post">Buat Kiriman</string>
+    <string name="no_media_selected">Tidak ada media yang dipilih</string>
+    <string name="upload_story">Unggah Cerita</string>
+    <string name="detail_story">Cerita Lengkap</string>
+    <string name="created_by_salsabila">Dibuat oleh @Salsabila</string>
+    <string name="invalid_input_message">Nilai masukkan salah. periksa kembali.</string>
+    <string name="account_already_register">Akun telah didaftarkan</string>
+    <string name="user_not_found_401">Pengguna tidak ditemukan. atau kata sandi salah. coba lagi.</string>
+    <string name="youre_image_placeholder">Tempat gambar ceritamu</string>
+    <string name="what_are_you_thinking">Apa yang kamu pikirkan?</string>
+    <string name="home">Beranda</string>
+    <string name="map">Peta</string>
+    <string name="invalid_email">Alamat email tidak valid</string>
+    <string name="invalid_password">Password tidak boleh kurang dari 8 karakter</string>
+    <string name="style_parsing_failed">Gagal mengubah tampilan.</string>
+    <string name="error_cannot_find_style_maps">Kesalahan. tidak dapat menemukan tampilan</string>
+    <string name="share_your_location">Bagikan lokasi mu</string>
+    <string name="location_is_not_found">Lokasi tidak ditemukan. coba lagi.</string>
+    <string name="retry">Coba lagi.</string>
+</resources>

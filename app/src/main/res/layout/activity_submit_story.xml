@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.submitStory.SubmitStoryActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@id/topAppBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/ic_back"
+                    app:title="@string/upload_story" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ImageView
+                android:id="@+id/previewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/youre_image_placeholder"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/galleryButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topAppBarLayout"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imagePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/placeholder_imagepng"
+                app:layout_constraintBottom_toTopOf="@+id/galleryButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topAppBarLayout"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cameraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="340dp"
+                android:paddingVertical="10dp"
+                android:text="@string/camera"
+                app:icon="@drawable/ic_camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/previewImageView"
+                app:layout_constraintVertical_bias="0.551" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/galleryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="352dp"
+                android:paddingVertical="10dp"
+                android:text="@string/gallery"
+                app:icon="@drawable/ic_gallery"
+                app:layout_constraintBottom_toTopOf="@+id/postButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.973"
+                app:layout_constraintStart_toEndOf="@id/cameraButton"
+                app:layout_constraintTop_toTopOf="@+id/cameraButton"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/what_are_you_thinking"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationSwitch"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@id/description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/description_submit"
+                android:gravity="top|start"
+                android:importantForAutofill="no"
+                android:inputType="text|textMultiLine"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/locationSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/share_your_location"
+                app:layout_constraintEnd_toEndOf="@+id/galleryButton"
+                app:layout_constraintStart_toStartOf="@+id/cameraButton"
+                app:layout_constraintTop_toBottomOf="@+id/cameraButton"
+                app:thumbIcon="@drawable/ic_check" />
+
+            <Button
+                android:id="@+id/postButton"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="@string/create_post"
+                android:textColor="?attr/colorOnPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.626"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,162 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:alpha="0"
+                android:text="@string/welcome_register"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:alpha="100" />
+
+            <TextView
+                android:id="@+id/tvRegisterContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:alpha="0"
+                android:text="@string/ceate_new_account"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/tvWelcome"
+                app:layout_constraintRight_toRightOf="@id/tvWelcome"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+                tools:alpha="100" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="20dp"
+                android:alpha="0"
+                android:contentDescription="@string/gambar_di_halaman_register"
+                android:src="@drawable/asset_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegisterContinue"
+                tools:alpha="100" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_register_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:alpha="0"
+                android:hint="@string/name"
+                android:labelFor="@id/ed_register_email"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:startIconDrawable="@drawable/ic_rename_outline_24"
+                tools:alpha="100">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_register_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_register_email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:alpha="0"
+                android:hint="@string/email"
+                android:labelFor="@id/ed_register_email"
+                app:layout_constraintTop_toBottomOf="@+id/ed_register_name_layout"
+                app:startIconDrawable="@drawable/ic_email_24"
+                tools:alpha="100">
+
+                <com.example.storyapp.ui.customView.MyEditTextEmail
+                    android:id="@+id/ed_register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_register_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:alpha="0"
+                android:hint="@string/password"
+                android:labelFor="@id/ed_register_password"
+                app:endIconMode="password_toggle"
+                app:layout_constraintTop_toBottomOf="@id/ed_register_email_layout"
+                app:startIconDrawable="@drawable/ic_password_24"
+                tools:alpha="100">
+
+                <com.example.storyapp.ui.customView.MyEditTextPassword
+                    android:id="@+id/ed_register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="20dp"
+                android:alpha="0"
+                android:backgroundTint="@color/navy"
+                android:text="@string/btn_register"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/btn_login"
+                app:layout_constraintStart_toStartOf="@id/ed_register_password_layout"
+                app:layout_constraintTop_toBottomOf="@id/ed_register_password_layout"
+                tools:alpha="100" />
+
+            <Button
+                android:id="@+id/btn_login"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:alpha="0"
+                android:text="@string/btn_login"
+                android:textColor="@color/blue_sky"
+                app:layout_constraintEnd_toEndOf="@id/ed_register_password_layout"
+                app:layout_constraintStart_toEndOf="@id/btn_register"
+                app:layout_constraintTop_toBottomOf="@id/ed_register_password_layout"
+                tools:alpha="100" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
